@@ -1,4 +1,7 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
+import Header from './Components/Header';
+import Main from './Components/Main';
+import Footer from './Components/Footer';
 import './App.css';
 
 function App() {
