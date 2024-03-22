@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { Box, Heading, HStack, VStack, Text as ChakraText, Image, Card, CardBody, CardHeader, Button, CardFooter } from '@chakra-ui/react';
+import {useLocation} from 'react-router-dom';
 
 const dishes = [
     {
@@ -26,9 +27,10 @@ const dishes = [
 ]
 
 function Menu() {
+    const { pathname } = useLocation();
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, []);
+        window.scroll(0,0);
+    }, [pathname]);
 
   return (
     <Box

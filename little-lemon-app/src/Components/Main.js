@@ -2,6 +2,7 @@ import {Box, HStack, Image, VStack, Heading, Text as ChakraText, Button, Card, C
 import restaurantfood from '../assets/images/restauranfood.jpg';
 import {Link} from 'react-router-dom';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const dishes = [
     {
@@ -27,6 +28,11 @@ const dishes = [
 ]
 
 function Main() {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [pathname]);
+
     return(
         <Box>
             <Box
