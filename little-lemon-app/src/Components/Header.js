@@ -1,16 +1,18 @@
 import {Box, HStack, Image} from '@chakra-ui/react'
 import React, { useEffect, useRef } from "react";
+import {Link} from "react-router-dom";
 
 function Header() {
     return(
-      <Box bg='white'
-        color="black"
-        maxWidth="100%"
-        margin="0 auto"
-        fontFamily='Markazi Text'
-        p='2'
-        fontSize='xl'
-        >
+    <Box
+    bg='white'
+    color="black"
+    maxWidth="100%"
+    margin="0 auto"
+    fontFamily='Markazi Text'
+    p='2'
+    fontSize='xl'
+    >
         <HStack
           px='6em'
           py={8}
@@ -22,48 +24,42 @@ function Header() {
           </nav>
           <nav>
             <HStack spacing={12}>
-              <a
-                href="/#projects"
-                //onClick={handleClick("projects")}
+              <Link
+                to="/"
                 style={{cursor: "pointer"}}
               >
                 Home
-              </a>
-              <a
-                href="/#contact-me"
-                //onClick={handleClick("contactme")}
+              </Link>
+              <Link
+                to="/About"
                 style={{cursor: "pointer"}}
               >
                 About
-              </a>
-              <a
-                href="/#projects"
-                //onClick={handleClick("projects")}
+              </Link>
+              <Link
+                to="/Menu"
                 style={{cursor: "pointer"}}
               >
                 Menu
-              </a>
-              <a
-                href="/#projects"
-                //onClick={handleClick("projects")}
+              </Link>
+              <Link
+                to="/Reservations"
                 style={{cursor: "pointer"}}
               >
                 Reservations
-              </a>
-              <a
-                href="/#projects"
-                //onClick={handleClick("projects")}
+              </Link>
+              <Link
+                to="/Order-online"
                 style={{cursor: "pointer"}}
               >
                 Order Online
-              </a>
-              <a
-                href="/#projects"
-                //onClick={handleClick("projects")}
+              </Link>
+              <Link
+                to="/Login"
                 style={{cursor: "pointer"}}
               >
                 Login
-              </a>
+              </Link>
             </HStack>
           </nav>
         </HStack>
