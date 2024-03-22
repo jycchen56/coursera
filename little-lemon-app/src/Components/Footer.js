@@ -37,13 +37,13 @@ function Footer() {
             align='center'
             >
                 <ChakraText
-                w='20em'
+                w='12em'
                 >
                     Copyright 2013-2024 Little Lemon Inc.
                 </ChakraText>
                 <VStack
                 align='center'
-                w='20em'
+                w='12em'
                 >
                     {socials.map((socials, index) => (
                         <a
@@ -57,7 +57,7 @@ function Footer() {
                     ))}
                 </VStack>
                 <ChakraText
-                w='20em'
+                w='12em'
                 >
                     Chicago, IL.
                 </ChakraText>

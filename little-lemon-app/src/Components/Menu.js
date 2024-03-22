@@ -1,7 +1,6 @@
-import {Box, HStack, Image, VStack, Heading, Text as ChakraText, Button, Card, CardHeader, CardBody, CardFooter, Spacer} from '@chakra-ui/react';
-import restaurantfood from '../assets/images/restauranfood.jpg';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import { useEffect } from 'react';
+import { Box, Heading, HStack, VStack, Text as ChakraText, Image, Card, CardBody, CardHeader, Button, CardFooter } from '@chakra-ui/react';
 
 const dishes = [
     {
@@ -26,64 +25,13 @@ const dishes = [
     }
 ]
 
-function Main() {
-    return(
-        <Box>
-            <Box
-            bg='#495E57'
-            color='white'
-            w='100%'
-            h='100%'
-            px={10}
-            py={10}
-            >
-                <HStack
-                px={10}
-                py={6}
-                spacing='26em'
-                align='center'
-                >
-                    <VStack
-                    px={10}
-                    py={10}
-                    spacing={4}
-                    align='left'
-                    >
-                        <Heading fontFamily='Markazi Text' size='4xl' color='#F4CE14'>
-                            Little Lemon
-                        </Heading>
-                        <Heading fontFamily='Markazi Text' size='2xl'>
-                            Chicago
-                        </Heading>
-                        <ChakraText fontSize='2xl' maxW='12em' noOfLines={[2,3,4,5]}>
-                            We are a family owned Mediterranea restauraunt, focused on recipes served with a modern twist.
-                        </ChakraText>
-                        <Link to='/Reservations'>
-                            <Button
-                            w='16em'
-                            h='3em'
-                            colorScheme='yellow'
-                            >
-                                Reserve a Table
-                            </Button>
-                        </Link>
-                    </VStack>
-                    <Box
-                    px={0}
-                    py={0}
-                    >
-                    <Image
-                    src={restaurantfood}
-                    overflow='hidden'
-                    h='45em'
-                    w='50em'
-                    objectFit='cover'
-                    borderRadius='15px'
-                    />
-                    </Box>
-                </HStack>
-            </Box>
-            <Box
+function Menu() {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
+
+  return (
+    <Box
             bg='white'
             color='black'
             p={10}
@@ -100,14 +48,6 @@ function Main() {
                     >
                     This week's specials!
                     </Heading>
-                        <Link to='/Menu'>
-                            <Button
-                            colorScheme='yellow'
-                            p={8}
-                            >
-                                Online Menu
-                            </Button>
-                        </Link>
                 </HStack>
                 <HStack
                 px={10}
@@ -173,8 +113,7 @@ function Main() {
                     ))}
                 </HStack>
             </Box>
-        </Box>
-    );
+  );
 }
 
-export default Main;
+export default Menu;
